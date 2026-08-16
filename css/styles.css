@@ -92,7 +92,7 @@ p { margin-bottom: 15px; }
 .curso-accion { flex: 0 0 120px; text-align: right; margin-left: 20px; }
 
 /* Contacto */
-.contacto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+.contacto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-bottom: 50px; }
 .contacto-form { background: var(--bg-white); padding: 40px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
 .form-group { margin-bottom: 20px; }
 .form-group label { display: block; margin-bottom: 8px; font-weight: 500; }
@@ -101,10 +101,84 @@ p { margin-bottom: 15px; }
 .info-list li { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; font-size: 1.1rem; }
 .info-list i { color: var(--secondary-green); font-size: 1.2rem; width: 20px; }
 .info-list a:hover { color: var(--primary-green); text-decoration: underline; }
-.redes-sociales { margin-top: 30px; display: flex; gap: 15px; }
-.redes-sociales a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: var(--primary-green); color: var(--bg-pure); border-radius: 50%; transition: background 0.3s ease; }
-.redes-sociales a:hover { background: var(--light-green); }
 .mapa-container { margin-top: 30px; border-radius: 10px; overflow: hidden; }
+
+
+/* --- REDES SOCIALES DESTACADAS (NUEVA SECCIÓN) --- */
+.redes-destacadas {
+    background: var(--bg-white);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    border-top: 4px solid var(--primary-green);
+}
+
+.redes-destacadas h3 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.redes-destacadas p {
+    color: var(--text-light);
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.redes-iconos-grandes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.red-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    background: var(--bg-pure);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.red-btn i {
+    font-size: 1.4rem;
+}
+
+/* Colores de marca en hover */
+.red-btn.instagram:hover {
+    background: #E1306C;
+    color: white;
+    border-color: #E1306C;
+}
+
+.red-btn.facebook:hover {
+    background: #1877F2;
+    color: white;
+    border-color: #1877F2;
+}
+
+.red-btn.whatsapp:hover {
+    background: #25D366;
+    color: white;
+    border-color: #25D366;
+}
+
+.red-btn.tiktok:hover {
+    background: #000000;
+    color: white;
+    border-color: #000000;
+}
+
+
 
 /* Footer */
 footer { background: var(--primary-green); color: var(--bg-pure); text-align: center; padding: 20px 0; }
