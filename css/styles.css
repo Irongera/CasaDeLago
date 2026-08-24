@@ -44,7 +44,7 @@ p { margin-bottom: 15px; }
 .hamburger { display: none; font-size: 1.5rem; cursor: pointer; color: var(--primary-green); }
 
 /* Hero */
-.hero-section { background: linear-gradient(rgba(45, 51, 47, 0.6), rgba(45, 51, 47, 0.6)), url('../assets/portada.png') no-repeat center center/cover; height: 100vh; display: flex; align-items: center; text-align: center; color: var(--bg-pure); }
+.hero-section { background: linear-gradient(rgba(45, 51, 47, 0.6), rgba(45, 51, 47, 0.6)), url('../assets/portada1.png') no-repeat center center/cover; height: 100vh; display: flex; align-items: center; text-align: center; color: var(--bg-pure); }
 .hero-content { max-width: 800px; margin: 0 auto; padding: 0 20px; }
 .hero-content h1 { font-size: 3.5rem; color: var(--bg-pure); margin-bottom: 20px; }
 .hero-content p { font-size: 1.2rem; margin-bottom: 30px; }
