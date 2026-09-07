@@ -37,3 +37,65 @@ window.addEventListener('scroll', () => {
         navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
     }
 });
+
+// Cerrar popup del curso
+function cerrarPopup() {
+    document.getElementById("cursoPopup").style.display = "none";
+}
+
+// =========================================
+// CARRUSEL DE GALERÍA
+// =========================================
+
+const galeriaTrack = document.getElementById('galeriaTrack');
+const galeriaAnterior = document.getElementById('galeriaAnterior');
+const galeriaSiguiente = document.getElementById('galeriaSiguiente');
+
+let paginaGaleria = 0;
+
+function actualizarGaleria() {
+
+    const paginas = document.querySelectorAll('.galeria-pagina');
+
+    if (!galeriaTrack || paginas.length === 0) {
+        return;
+    }
+
+    galeriaTrack.style.transform =
+        `translateX(-${paginaGaleria * 100}%)`;
+
+    // Desactivar flecha izquierda si estamos al inicio
+    galeriaAnterior.disabled = paginaGaleria === 0;
+
+    // Desactivar flecha derecha si estamos en la última página
+    galeriaSiguiente.disabled =
+        paginaGaleria === paginas.length - 1;
+}
+
+
+// Flecha derecha
+galeriaSiguiente.addEventListener('click', function() {
+
+    const paginas = document.querySelectorAll('.galeria-pagina');
+
+    if (paginaGaleria < paginas.length - 1) {
+        paginaGaleria++;
+        actualizarGaleria();
+    }
+
+});
+
+
+// Flecha izquierda
+galeriaAnterior.addEventListener('click', function() {
+
+    if (paginaGaleria > 0) {
+        paginaGaleria--;
+        actualizarGaleria();
+    }
+
+});
+
+
+// Iniciar galería
+actualizarGaleria();

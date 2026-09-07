@@ -9,6 +9,103 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+    /* POPUP CURSO */
+    .curso-popup {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        width: 270px;
+        background: white;
+        border-radius: 18px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+        z-index: 9999;
+        overflow: hidden;
+        animation: aparecerPopup 0.5s ease;
+    }
+
+    .curso-popup-contenido {
+        padding: 18px;
+        position: relative;
+    }
+
+    .curso-popup-cerrar {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        width: 28px;
+        height: 28px;
+        border: none;
+        background: transparent;
+        font-size: 20px;
+        color: #777;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .curso-popup-cerrar:hover {
+        color: #333;
+    }
+
+    .curso-popup-etiqueta {
+        font-size: 12px;
+        font-weight: 600;
+        color: #6b9f4e;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+    }
+
+    .curso-popup h3 {
+        margin: 0 0 8px;
+        font-size: 18px;
+        color: #315d3b;
+    }
+
+    .curso-popup p {
+        margin: 0 0 18px;
+        font-size: 13px;
+        line-height: 1.6;
+        color: #555;
+    }
+
+    .curso-popup-link {
+        display: inline-block;
+        background: #6b9f4e;
+        color: white;
+        padding: 10px 18px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+    .curso-popup-link:hover {
+        background: #56863f;
+        transform: translateY(-1px);
+    }
+
+    @keyframes aparecerPopup {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Adaptación para celular */
+    @media (max-width: 600px) {
+        .curso-popup {
+            width: calc(100% - 30px);
+            right: 15px;
+            bottom: 15px;
+        }
+    }
+</style>
 </head>
 <body>
 
@@ -106,15 +203,53 @@
         <div class="container">
             <h2 class="section-title">Galería</h2>
             <p class="section-subtitle">Conoce nuestras instalaciones y los hermosos entornos naturales que nos rodean.</p>
-            <div class="galeria-grid">
-                <!-- Reemplazar src con imágenes de tu galería -->
-                <img src="./assets/Galeria_1.jpeg" alt="Yoga en la naturaleza" class="galeria-img">
-                <img src="./assets/Galeria_2.jpg" alt="Jardines del centro" class="galeria-img">
-                <img src="./assets/Galeria_3.png" alt="Meditación grupal" class="galeria-img">
-                <img src="./assets/Galeria_4.jpeg" alt="Habitaciones de retiro" class="galeria-img">
-                <img src="./assets/Galeria_5.JPEG" alt="Sendero natural" class="galeria-img">
-                <img src="./assets/Galeria_6.JPEG" alt="Capilla de oración" class="galeria-img">
+           <div class="galeria-carrusel">
+
+    <!-- Flecha izquierda -->
+    <button class="galeria-flecha izquierda" id="galeriaAnterior">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <!-- Fotos -->
+    <div class="galeria-ventana">
+
+        <div class="galeria-track" id="galeriaTrack">
+
+            <!-- GRUPO 1: 6 fotos -->
+            <div class="galeria-pagina">
+
+                <img src="./assets/Galeria_1.jpeg" alt="Casa del Lago" class="galeria-img">
+                <img src="./assets/Galeria_2.jpg" alt="Lago de Casa del Lago" class="galeria-img">
+                <img src="./assets/Galeria_3.png" alt="Entorno natural" class="galeria-img">
+                <img src="./assets/Galeria_4.jpeg" alt="Instalaciones de Casa del Lago" class="galeria-img">
+                <img src="./assets/Galeria_5.JPEG" alt="Sendero de Casa del Lago" class="galeria-img">
+                <img src="./assets/Galeria_6.JPEG" alt="Naturaleza de Casa del Lago" class="galeria-img">
+
             </div>
+
+
+            <div class="galeria-pagina">
+
+                <img src="./assets/Galeria_7.jpeg" class="galeria-img">
+                <img src="./assets/Galeria_8.jpeg" class="galeria-img">
+                <img src="./assets/Galeria_9.jpeg" class="galeria-img">
+                <img src="./assets/Galeria_10.jpeg" class="galeria-img">
+                <img src="./assets/Galeria_11.jpeg" class="galeria-img">
+                <img src="./assets/Galeria_12.jpeg" class="galeria-img">
+
+            </div>
+        
+
+        </div>
+
+    </div>
+
+    <!-- Flecha derecha -->
+    <button class="galeria-flecha derecha" id="galeriaSiguiente">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+
+</div>
         </div>
     </section>
 
@@ -135,8 +270,8 @@
                         <span class="mes">SEP</span>
                     </div>
                     <div class="curso-info">
-                        <h3>Retiro de Silencio y Meditación</h3>
-                        <p>Tres días desconectados del mundo digital para reconectar con tu esencia. Incluye alojamiento y comidas vegetarianas.</p>
+                        <h3>Descubre tus Talentos</h3>
+                        <p>Una experiencia vivencial para descubrir nuestros talentos, reconectar con nuestra esencia y explorar nuevas formas de vivir desde el amor y la conciencia.</p>
                     </div>
                     <div class="curso-accion">
                         <a href="#contacto" class="btn-outline">Más Info</a>
@@ -144,6 +279,7 @@
                 </div>
 
                 <!-- Curso 2 -->
+                 <!--
                 <div class="curso-item">
                     <div class="curso-img">
                         <img src="https://images.unsplash.com/photo-1524863479829-916d8e77f114?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Taller emociones">
@@ -160,8 +296,9 @@
                         <a href="#contacto" class="btn-outline">Más Info</a>
                     </div>
                 </div>
-
+-->
                 <!-- Curso 3 -->
+                 <!--
                 <div class="curso-item">
                     <div class="curso-img">
                         <img src="https://images.unsplash.com/photo-1505909182942-e2f09aee3e89?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Caminos del alma">
@@ -178,6 +315,7 @@
                         <a href="#contacto" class="btn-outline">Más Info</a>
                     </div>
                 </div>
+ -->               
             </div>
         </div>
     </section>
@@ -190,7 +328,7 @@
                 
                 <div class="contacto-form">
                     <h3>Envíanos un mensaje</h3>
-                    <form action="https://formspree.io/f/TU_ID_DE_FORMSPREE" method="POST">
+                    <form action="https://formspree.io/f/mljepojd" method="POST">
                         <div class="form-group">
                             <label for="nombre">Nombre Completo</label>
                             <input type="text" id="nombre" name="nombre" required>
@@ -249,6 +387,37 @@
             <p>&copy; 2026 Casa del Lago. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+<!-- POPUP NUEVO CURSO -->
+<div id="cursoPopup" class="curso-popup">
+
+    <div class="curso-popup-contenido">
+
+        <button 
+            class="curso-popup-cerrar" 
+            onclick="cerrarPopup()"
+            aria-label="Cerrar">
+            ×
+        </button>
+
+        <div class="curso-popup-etiqueta">
+            ✨ Próxima experiencia
+        </div>
+
+        <h3>Descubre tus Talentos</h3>
+
+        <p>
+            Una experiencia para descubrir tus talentos y
+            reconectar contigo.
+        </p>
+
+        <a href="#calendario" class="curso-popup-link">
+            Conoce más →
+        </a>
+
+    </div>
+
+</div>
 
     <script src="js/script.js"></script>
 </body>
