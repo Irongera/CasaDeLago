@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Curso | Casa del Lago</title>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Estilos específicos para la vista de detalles del curso */
+        .curso-hero {
+            padding: 140px 20px 80px;
+            /* Imagen de fondo del curso */
+            background: linear-gradient(rgba(45, 51, 47, 0.7), rgba(45, 51, 47, 0.7)), url('https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            text-align: center;
+            color: var(--bg-pure);
+        }
+        .curso-hero h1 {
+            color: var(--bg-pure);
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        .curso-badges {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+        .badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .badge i {
+            color: var(--light-green);
+        }
+        
+        .curso-contenido {
+            padding: 60px 0;
+        }
+        .btn-volver {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-light);
+            font-weight: 500;
+            margin-bottom: 40px;
+            transition: color 0.3s;
+        }
+        .btn-volver:hover {
+            color: var(--primary-green);
+        }
+        
+        .curso-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+        }
+        .curso-descripcion h2, .curso-incluye h2, .sidebar-card h3 {
+            color: var(--primary-green);
+            margin-bottom: 20px;
+        }
+        .curso-descripcion p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        .lista-incluye {
+            margin-top: 30px;
+        }
+        .lista-incluye li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            font-size: 1.1rem;
+        }
+        .lista-incluye i {
+            color: var(--secondary-green);
+            margin-top: 5px;
+        }
+
+        .sidebar-card {
+            background: var(--bg-white);
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border-top: 4px solid var(--secondary-green);
+        }
+        .precio-destacado {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .ubicacion-texto {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+        .ubicacion-texto i {
+            color: var(--secondary-green);
+            font-size: 1.3rem;
+        }
+        .mapa-curso iframe {
+            width: 100%;
+            height: 250px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        @media (max-width: 900px) {
+            .curso-grid {
+                grid-template-columns: 1fr;
+            }
+            .curso-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación -->
+    <nav id="navbar" style="box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="./assets/logo_sf.png" alt="Logo Casa del Lago">
+                <span>Casa del Lago</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#calendario">Cursos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado del Curso -->
+    <header class="curso-hero">
+        <div class="container">
+            <h1>Retiro Presencial de Un Día</h1>
+            
+            <div class="curso-badges">
+                <div class="badge"><i class="far fa-calendar-alt"></i> 26 de Septiembre</div>
+                <div class="badge"><i class="far fa-clock"></i> 09:00 AM - 06:00 PM</div>
+                <div class="badge"><i class="fas fa-hourglass-half"></i> Duración: 1 Día</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <section class="curso-contenido">
+        <div class="container">
+            <!-- Botón para ir atrás -->
+            <a href="index.html" class="btn-volver">
+                <i class="fas fa-arrow-left"></i> Volver a la página principal
+            </a>
+
+            <div class="curso-grid">
+                <!-- Columna Izquierda: Detalles del Curso -->
+                <div class="curso-detalles">
+                    <div class="curso-descripcion">
+                        <h2>Descripción</h2>
+                        <p>Una experiencia vivencial diseñada para descubrir nuestros talentos, reconectar con nuestra esencia y explorar nuevas formas de vivir desde el amor y la conciencia. Este retiro de un día te permitirá alejarte del ritmo acelerado de la vida diaria y sumergirte en un entorno natural ideal para la introspección.</p>
+                        <p>A través de diversas dinámicas, ejercicios y espacios de reflexión, trabajaremos en profundidad para encontrar la paz interior y despertar nuestra consciencia en un ambiente seguro y guiado.</p>
+                    </div>
+
+                    <div class="curso-incluye lista-incluye">
+                        <h2>¿Qué incluye?</h2>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Acceso a todas las conferencias y talleres del retiro.</li>
+                            <li><i class="fas fa-check-circle"></i> Material de trabajo y un cuaderno de emprendimiento personal para tus anotaciones.</li>
+                            <li><i class="fas fa-check-circle"></i> Alimentación completa (Comida y coffee breaks a lo largo del día).</li>
+                            <li><i class="fas fa-check-circle"></i> Acceso libre a los senderos y jardines para meditación y descanso.</li>
+                            <li><i class="fas fa-check-circle"></i> Estacionamiento gratuito en las instalaciones.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Sidebar con Costo y Ubicación -->
+                <div class="curso-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Inversión</h3>
+                        <div class="precio-destacado">$500 MXN</div>
+                        <a href="https://wa.me/524423830298" class="btn-primary btn-block" style="text-align: center;">Reservar mi lugar</a>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Ubicación</h3>
+                        <div class="ubicacion-texto">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>C. Independencia 1231, La Ceja, 76955, Huimilpan, Qro.</span>
+                        </div>
+                        <div class="mapa-curso">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3739.834804697147!2d-100.27777492476069!3d20.389699981104616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDIzJzIyLjkiTiAxMDDCsDE2JzMwLjciVw!5e0!3m2!1ses-419!2smx!4v1786908043036!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto (Idéntica a index.html) -->
+    <section id="contacto" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Contáctanos</h2>
+            <div class="contacto-grid">
+                
+                <div class="contacto-form">
+                    <h3>Envíanos un mensaje</h3>
+                    <form action="https://formspree.io/f/mljepojd" method="POST">
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje o duda</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-block">Enviar Mensaje</button>
+                    </form>
+                </div>
+
+                <div class="contacto-info">
+                    <h3>Información Directa</h3>
+                    <ul class="info-list">
+                        <li><i class="fas fa-phone-alt"></i><span>+52 442 383 0298</span></li>
+                        <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/524423830298" target="_blank">Escríbenos por WhatsApp</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:contacto@vivecasadelago.com">contacto@vivecasadelago.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Casa del Lago. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

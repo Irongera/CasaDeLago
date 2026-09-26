@@ -122,6 +122,72 @@ p { margin-bottom: 15px; }
 .info-list a:hover { color: var(--primary-green); text-decoration: underline; }
 .mapa-container { margin-top: 30px; border-radius: 10px; overflow: hidden; }
 
+/* =========================================
+   SECCIÓN MEDIA / PODCAST
+   ========================================= */
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.media-card {
+    background: var(--bg-pure);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--secondary-green);
+    transition: transform 0.3s ease;
+}
+
+.media-card:hover {
+    transform: translateY(-5px);
+}
+
+.media-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.4rem;
+    color: var(--text-dark);
+}
+
+.media-card p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+/* Contenedores responsivos para los iframes */
+.iframe-container {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Mantener proporción 16:9 para YouTube */
+.video-container {
+    padding-bottom: 56.25%; 
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* Spotify tiene una altura fija definida en su propio iframe, 
+   así que solo aseguramos que tome el ancho completo */
+.spotify-container iframe {
+    width: 100%;
+}
+
 
 /* --- REDES SOCIALES DESTACADAS (NUEVA SECCIÓN) --- */
 .redes-destacadas {
@@ -197,7 +263,17 @@ p { margin-bottom: 15px; }
     border-color: #000000;
 }
 
+.red-btn.youtube:hover {
+    background: #FF0000;
+    color: white;
+    border-color: #FF0000;
+}
 
+.red-btn.spotify:hover {
+    background: #1DB954;
+    color: white;
+    border-color: #1DB954;
+}
 
 /* Footer */
 footer { background: var(--primary-green); color: var(--bg-pure); text-align: center; padding: 20px 0; }
